@@ -1,0 +1,464 @@
+      1 .
+    575 ¤
+      1  * 1. Correct color not being inherited.
+      1  * 1. Correct `color` not being inherited in IE 8/9/10/11.
+      1 $accordion-border: 3px solid $color-gray-lightest;
+      1     $active-color:         adjust-color($base-color, $hue: 4,  $saturation: -12%,  $lightness: -10%);
+      1       $active-color:         grayscale($active-color);
+      1 ./_all.scss
+      2   and (type-of($gradient-positions) != color) {
+      1     background: $active-color;
+      2 ///     background-color: #00f;
+      2 ///     background-color: #0f0;
+      1 ///     background-color: #664a20;
+      1 ///     background-color: #a8dfc9;
+      1   background-color: $base-color;
+      1     background-color: $base-color-active;
+      1     background-color: $base-color-hover;
+      1     background-color: $bgcolor;
+      1   background: $color-black;
+      1       background-color: $color-base;
+      1     background-color: $color-gray;
+      1       background-color: $color-gray-dark;
+      1   background-color: $color-gray-dark;
+      2     background-color: $color-gray-lighter;
+      2   background-color: $color-gray-lighter;
+      3       background-color: $color-gray-lightest;
+      6   background-color: $color-gray-lightest;
+      4   background-color: $color-primary;
+      1     background-color: $color-primary-alt;
+      1       background-color: $color-primary-alt-dark;
+      1       background-color: $color-primary-alt-darkest;
+      2     background-color: $color-primary-darker;
+      1           background-color: $color-primary-darkest;
+      2         background-color: $color-primary-darkest;
+      2     background-color: $color-primary-darkest;
+      3   background-color: $color-primary-darkest;
+      1     background-color: $color-secondary;
+      1       background-color: $color-secondary-dark;
+      1       background-color: $color-secondary-darkest;
+      2     background-color: $color-white;
+      3   background-color: $color-white;
+      2 ///     background-color: #f00;
+      1   background-color:  $fallback-color;
+      1   background-color: $fallback-color;
+      1 ///       background-color: #ffbb52;
+      2 ///     background-color: #ffbb52;
+      3   background: $color-gray-light;
+      1   background: $color-gray-lighter;
+      3   background: $color-gray-lightest;
+      1   $background-color: if(length($color) == 2, nth($color, 2), transparent);
+      1   background: $color-primary;
+      1 ///     background-color: shade(#ffbb52, 60%);
+      1 ///     background-color: tint(#6ecaa6, 40%);
+      1           background-color: transparent;
+      1         background-color: transparent;
+      1       background-color: transparent;
+      2     background-color: transparent;
+      3   background-color: transparent;
+      1     background: $color-white;
+      2   background: $color-white;
+      2     $base-color: #4294f0;
+      1     $base-color-active: adjust-color($base-color, $saturation: -4%, $lightness: -5%);
+      1       $base-color-active: grayscale($base-color-active);
+      1     $base-color-hover:    adjust-color($base-color,                                $lightness: -4.5%);
+      1     $base-color-hover:    adjust-color($base-color, $saturation: -4%, $lightness: -5%);
+      1     $base-color-hover:    adjust-color($base-color, $saturation: 4%, $lightness: 5%);
+      2       $base-color-hover:    grayscale($base-color-hover);
+      1       $base-color-hover: grayscale($base-color-hover);
+      2     $base-color: $style;
+      1     border: 1px solid $color-gray;
+      7   border: 1px solid $color-gray-medium;
+      3   border: 2px solid $color-focus;
+      1     border: 3px solid $color-green-light;
+      2     border: 3px solid $color-secondary-dark;
+      1     $border-active:        adjust-color($base-color, $hue: 6,  $saturation: -2.5%, $lightness: -30%);
+      1     $border-active:       adjust-color($base-color, $saturation: 9%, $lightness: -14%);
+      1   $border:        adjust-color($base-color, $red: -117, $green: -111, $blue: -81);
+      1   $border:        adjust-color($base-color, $saturation:  9%,  $lightness: -14%);
+      1   border-bottom: 0.7rem solid $color-primary;
+      1       border-bottom: 1px solid $color-base;
+      1     border-bottom: 1px solid $color-base;
+      1     border-bottom: 1px solid $color-gray-light;
+      2   border-bottom: 1px solid $color-gray-light;
+      1     $border-bottom-active: adjust-color($base-color, $hue: 11, $saturation:  6%,   $lightness: -31%);
+      1   $border-bottom: adjust-color($base-color, $hue:  8, $saturation: -11%, $lightness: -26%);
+      1     $border-bottom:       adjust-color($base-color, $hue:  8, $saturation:  13.5%, $lightness: -32%);
+      1   $border-bottom: adjust-color($base-color, $red: -126, $green: -127, $blue: -122);
+      1       border-bottom: $height solid $foreground-color;
+      1     border-bottom: $height solid $foreground-color;
+      2       border-bottom: $width solid $background-color;
+      1     border-color: $background-color $background-color $background-color $foreground-color;
+      1     border-color: $background-color $background-color $foreground-color;
+      1     border-color: $background-color $foreground-color $background-color $background-color;
+      1     border-color: $border-top $border-sides $border-bottom;
+      1   border-color: $border-top $border-sides $border-bottom;
+      1     border-color: $foreground-color $background-color $background-color;
+      1     border: $input-border-width solid $color-gray;
+      1   border: $input-border-width solid $color-gray;
+      1       border-left: 0.4rem solid $color-primary;
+      1   border-left: 1px solid $color-gray-light;
+      1     border-left: 4px solid $color-primary;
+      1   border-left: 4px solid $color-secondary-dark;
+      1 ///     border-left-color: #e8ae1a;
+      1       border-left: $height solid $foreground-color;
+      2       border-left:  $width solid $background-color;
+      2       border-left: $width solid $background-color;
+      1 ///     border-right-color: #76cd9c;
+      1       border-right: $height solid $foreground-color;
+      4       border-right: $width solid $background-color;
+      1   $border-sides:  adjust-color($base-color, $hue:  4, $saturation: -21%, $lightness: -21%);
+      1     $border-sides:        adjust-color($base-color, $hue:  4, $saturation: -2%,    $lightness: -27%);
+      1   border-top: 1px solid $color-base;
+      1     border-top: 1px solid $color-gray;
+      1       border-top: 1px solid $color-gray-light;
+      1     $border-top:          adjust-color($base-color, $hue: -1, $saturation: -17%,   $lightness: -21%);
+      1   $border-top:    adjust-color($base-color, $hue: -1, $saturation: -30%, $lightness: -15%);
+      1 ///     border-top-color: #a60b55;
+      1       border-top: $height solid $foreground-color;
+      1     border-top: $height solid $foreground-color;
+      2       border-top: $width solid $background-color;
+      1   // <border-width> || <border-style> || <color>
+      1   box-shadow: 0 0 0 1px $color-gray-light;
+      1   box-shadow: 0 0 0 1px $color-gray-medium;
+      1   box-shadow: 0 0 0 1px $color-primary;
+      1   box-shadow: 0 0 0 1px $color-white, 0 0 0 3px $color-primary;
+      1   box-shadow: 0 0 0 2px $color-white, 0 0 0 3px $color-gray-medium;
+      1   box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-primary;
+      1   box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-primary, 0 0 3px 4px $color-focus, 0 0 7px 4px $color-focus;
+      1 $box-shadow:          0 0 2px $color-shadow !default;
+      1       box-shadow: $button-stroke $color-gray-light;
+      1       box-shadow: $button-stroke $color-gray-lighter;
+      1       box-shadow: $button-stroke $color-gray-light, $focus-shadow;
+      1     box-shadow: $button-stroke $color-primary;
+      1       box-shadow: $button-stroke $color-primary-darker;
+      1       box-shadow: $button-stroke $color-primary-darkest;
+      1       box-shadow: $button-stroke $color-primary-darkest, $focus-shadow;
+      1     box-shadow: $button-stroke $color-white;
+      1   color: #000;
+      1 $color-base:                 #212121 !default;
+      1 $color-black:                #000000 !default;
+      4   color: $color;
+      6     color: $color-base;
+      3   color: $color-base;
+      1   color: $color-base; // standardize on firefox
+      1         color: $color-gray;
+      1       color: $color-gray;
+      1     color: $color-gray;
+      1   color: $color-gray;
+      1     color: $color-gray-dark;
+      1   color: $color-gray-dark;
+      2       color: $color-gray-lighter;
+      2     color: $color-gray-lighter;
+      1   color: $color-gray-medium;
+      4       color: $color-primary;
+      2     color: $color-primary;
+      2   color: $color-primary;
+      2     color: $color-primary-alt;
+      1       color: $color-primary-darker;
+      3     color: $color-primary-darker;
+      2       color: $color-primary-darkest;
+      1   color: $color-secondary-dark;
+      1   color: $color-secondary-darkest;
+      1     color: $color-visited;
+      2         color: $color-white;
+      4       color: $color-white;
+      7     color: $color-white;
+      6   color: $color-white;
+      1 $color-cool-blue:            #205493 !default;
+      1 $color-cool-blue-lighter:    lighten($color-cool-blue, 60%) !default; // #8ba6ca
+      1 $color-cool-blue-lightest:   lighten($color-cool-blue, 90%) !default; // #dce4ef
+      1 $color-cool-blue-light:      lighten($color-cool-blue, 20%) !default; // #4773aa
+      1 $color-focus:                #3e94cf !default;
+      1 $color-gold:                 #fdb81e !default;
+      1 $color-gold-lighter:         lighten($color-gold, 60%) !default; //  #fad980
+      1 $color-gold-lightest:        lighten($color-gold, 83%) !default; //  #fff1d2
+      1 $color-gold-light:           lighten($color-gold, 20%) !default; //  #f9c642
+      1 $color-gray-cool-light:      lighten($color-primary, 90%) !default; // #dce4ef
+      1 $color-gray-dark:            #323a45 !default;
+      1 $color-gray:                 lighten($color-gray-dark, 20%) !default; // #5b616b
+      1 $color-gray-lighter:         lighten($color-gray-dark, 80%) !default; // #d6d7d9
+      1 $color-gray-lightest:        lighten($color-gray-dark, 91%) !default; // #f1f1f1
+      1 $color-gray-light:           lighten($color-gray-dark, 60%) !default; // #aeb0b5
+      1 $color-gray-medium:          #757575 !default; // lightest gray that passes color contrast
+      1 $color-gray-warm-dark:       #494440 !default;
+      1 $color-gray-warm-light:      lighten($color-gray-warm-dark, 90%) !default; // #e4e2e0
+      1 $color-green:                #2e8540 !default;
+      1 $color-green-lighter:        lighten($color-green, 60%) !default; // #94bfa2
+      1 $color-green-lightest:       lighten($color-green, 60%) !default; // #e7f4e4
+      1 $color-green-light:          lighten($color-green, 20%) !default; // #4aa564
+      4   $color:         hsl(0, 0, 100%);
+      4     $color:       hsl(0, 0, 20%);
+      1   color: inherit; /* 1 */
+      1 $color-primary:              #0071bc !default;
+      1 $color-primary-alt:          #02bfe7 !default;
+      1 $color-primary-alt-dark:     #00a6d2 !default;
+      1 $color-primary-alt-darkest:  #046b99 !default;
+      1 $color-primary-alt-lightest: lighten($color-primary-alt, 90%) !default; // #e1f3f8
+      1 $color-primary-alt-light:    lighten($color-primary-alt, 60%) !default; // #9bdaf1
+      1 $color-primary-darker:       #205493 !default;
+      1 $color-primary-darkest:      #112e51 !default;
+      1 $color-secondary-dark:       #cd2026 !default;
+      1 $color-secondary-darkest:    #981b1e !default;
+      1 $color-secondary:            #e31c3d !default;
+      1 $color-secondary-lightest:   lighten($color-secondary, 90%) !default; // #f9dede
+      1 $color-secondary-light:      lighten($color-secondary, 60%) !default; // #e59393
+      1 $color-shadow:               rgba(#000, 0.3) !default;
+      1   color: transparent;
+      1 $color-visited:              #4c2c92 !default;
+      1 $color-white:                #ffffff !default;
+      1 ./components
+      1 ./components/_accordions.scss
+      1 ./components/_alerts.scss
+      1 ./components/_banner.scss
+      1 ./components/_footer.scss
+      1 ./components/_forms.scss
+      1 ./components/_graphic-list.scss
+      1 ./components/_header.scss
+      1 ./components/_hero.scss
+      1 ./components/_layout.scss
+      1 ./components/_media-block.scss
+      1 ./components/_navigation.scss
+      1 ./components/_search.scss
+      1 ./components/_section.scss
+      1 ./components/_sidenav.scss
+      1 ./components/_skipnav.scss
+      1 ./core
+      1 ./core/_base.scss
+      1 ./core/_defaults.scss
+      1 ./core/_fonts.scss
+      1 ./core/_grid.scss
+      1 ./core/_grid-settings.scss
+      1 ./core/_utilities.scss
+      1 ./core/_variables.scss
+      1 // currentColor || <color>
+      1 @each $name, $bgcolor in $alerts {
+      1 ./elements
+      1 ./elements/_buttons.scss
+      1 ./elements/_embed.scss
+      1 ./elements/_figure.scss
+      1 ./elements/_inputs.scss
+      1 ./elements/_labels.scss
+      1 ./elements/_list.scss
+      1 ./elements/_table.scss
+      1 ./elements/_typography.scss
+      1   error: $color-secondary-lightest,
+      1 // Example: transition-property-names((transform, color, background), moz) -> -moz-transform, color, background
+      2     $fallback-color: $fallback;
+      1   $fallback-color: nth($first-color, 1);
+      1   $fallback-color: nth($g1, 1);
+      1   $first-color: nth($full, 1);
+      1     $first-stop-hover:  adjust-color($base-color, $red: -13, $green: -15, $blue: -18);
+      1 $focus-shadow:        0 0 3px $color-focus, 0 0 7px $color-focus !default;
+      1   $foreground-color: nth($color, 1);
+      1   $fourth-stop:   adjust-color($base-color, $red: -79,  $green: -70,  $blue: -46);
+      1     $fourth-stop-hover: adjust-color($base-color, $red: -86, $green: -80, $blue: -63);
+      1 @function gradient-stops($grid-columns, $color: $visual-grid-color) {
+      1 @function is-light($hex-color) {
+      1 @function shade($color, $percent) {
+      1 @function tint($color, $percent) {
+      1   // If $fallback is a color use that color as the fallback color
+      4   @if is-light($base-color) {
+      1       @if ($pos-type != color) or ($first-val != "transparent") {
+      1   @if ($pos-type == color) or (nth($pos, 1) == "transparent")  {
+      1   @if $type == flat and $b-color == grayscale($b-color) {
+      2   @if (type-of($fallback) == color) or ($fallback == "transparent") {
+      1   @if type-of($style) == color and type-of($base-color) == color {
+      1   @if type-of($style) == color and type-of($base-color) == number {
+      1   @if type-of($style) == string and type-of($base-color) == color {
+      1   @if type-of($style) == string and type-of($base-color) == number {
+      1   @if $type == pill and $b-color == grayscale($b-color) {
+      1   @if $type == shiny and $b-color == grayscale($b-color) {
+      1   @if $type == simple and $b-color == grayscale($b-color) {
+      1 @import "addons/border-color";
+      1 ///     @include border-color(#a60b55 #76cd9c null #e8ae1a);
+      5     @include buttonstyle($style, $base-color, $text-size, $padding);
+      1   @include directional-property(border, color, $vals...);
+      1     @include flat($b-color, false, $t-size, $pad);
+      1     @include flat($b-color, true, $t-size, $pad);
+      2     @include linear-gradient ($base-color-hover, $stop-gradient-hover);
+      2   @include linear-gradient ($base-color, $stop-gradient);
+      1   @include linear-gradient(top, $base-color 0%, $second-stop 50%, $third-stop 50%, $fourth-stop 100%);
+      1     @include pill($b-color, false, $t-size, $pad);
+      1     @include pill($b-color, true, $t-size, $pad);
+      1   @include prefixer(column-rule-color, $color, webkit moz spec);
+      1   @include prefixer(text-decoration-color, $color, moz);
+      1     @include shiny($b-color, false, $t-size, $pad);
+      1     @include shiny($b-color, true, $t-size, $pad);
+      1     @include simple($b-color, false, $t-size, $pad);
+      1     @include simple($b-color, true, $t-size, $pad);
+      1   info: $color-primary-alt-lightest
+      1 ///   input[type="color"],
+      1 ///   input[type="color"]:active,
+      1 ///   input[type="color"]:focus,
+      1 ///   input[type="color"]:hover,
+      1     $inset-shadow-active:  adjust-color($base-color, $hue: 9,  $saturation:  2%,   $lightness: -21.5%);
+      1     $inset-shadow-active: adjust-color($base-color, $red: -111, $green: -116, $blue: -122);
+      1     $inset-shadow-active: adjust-color($base-color, $saturation: 7%, $lightness: -17%);
+      1   $inset-shadow:  adjust-color($base-color, $hue: -1, $saturation: -1%,  $lightness:  7%);
+      1   $inset-shadow:  adjust-color($base-color, $red:  37,  $green:  29,  $blue:  12);
+      1   $inset-shadow:  adjust-color($base-color, $saturation: -8%,  $lightness:  15%);
+      1     $inset-shadow-hover:  adjust-color($base-color,           $saturation: -1%,    $lightness:  3%);
+      1     $inset-shadow-hover:  adjust-color($base-color, $saturation: -7%, $lightness:  5%);
+      1 ///   is-light($color)
+      1  *    Known issue: affects color of disabled elements.
+      1 ./lib
+      1 ./lib/addons
+      1 ./lib/addons/_border-color.scss
+      1 ./lib/addons/_border-radius.scss
+      1 ./lib/addons/_border-style.scss
+      1 ./lib/addons/_border-width.scss
+      1 ./lib/addons/_buttons.scss
+      1 ./lib/addons/_clearfix.scss
+      1 ./lib/addons/_ellipsis.scss
+      1 ./lib/addons/_font-stacks.scss
+      1 ./lib/addons/_hide-text.scss
+      1 ./lib/addons/_margin.scss
+      1 ./lib/addons/_padding.scss
+      1 ./lib/addons/_position.scss
+      1 ./lib/addons/_prefixer.scss
+      1 ./lib/addons/_retina-image.scss
+      1 ./lib/addons/_size.scss
+      1 ./lib/addons/_text-inputs.scss
+      1 ./lib/addons/_timing-functions.scss
+      1 ./lib/addons/_triangle.scss
+      1 ./lib/addons/_word-wrap.scss
+      1 ./lib/_bourbon-deprecated-upcoming.scss
+      1 ./lib/_bourbon.scss
+      1 ./lib/css3
+      1 ./lib/css3/_animation.scss
+      1 ./lib/css3/_appearance.scss
+      1 ./lib/css3/_backface-visibility.scss
+      1 ./lib/css3/_background-image.scss
+      1 ./lib/css3/_background.scss
+      1 ./lib/css3/_border-image.scss
+      1 ./lib/css3/_calc.scss
+      1 ./lib/css3/_columns.scss
+      1 ./lib/css3/_filter.scss
+      1 ./lib/css3/_flex-box.scss
+      1 ./lib/css3/_font-face.scss
+      1 ./lib/css3/_font-feature-settings.scss
+      1 ./lib/css3/_hidpi-media-query.scss
+      1 ./lib/css3/_hyphens.scss
+      1 ./lib/css3/_image-rendering.scss
+      1 ./lib/css3/_keyframes.scss
+      1 ./lib/css3/_linear-gradient.scss
+      1 ./lib/css3/_perspective.scss
+      1 ./lib/css3/_placeholder.scss
+      1 ./lib/css3/_radial-gradient.scss
+      1 ./lib/css3/_selection.scss
+      1 ./lib/css3/_text-decoration.scss
+      1 ./lib/css3/_transform.scss
+      1 ./lib/css3/_transition.scss
+      1 ./lib/css3/_user-select.scss
+      1 ./lib/functions
+      1 ./lib/functions/_assign-inputs.scss
+      1 ./lib/functions/_contains-falsy.scss
+      1 ./lib/functions/_contains.scss
+      1 ./lib/functions/_is-length.scss
+      1 ./lib/functions/_is-light.scss
+      1 ./lib/functions/_is-number.scss
+      1 ./lib/functions/_is-size.scss
+      1 ./lib/functions/_modular-scale.scss
+      1 ./lib/functions/_new-breakpoint.scss
+      1 ./lib/functions/_private.scss
+      1 ./lib/functions/_px-to-em.scss
+      1 ./lib/functions/_px-to-rem.scss
+      1 ./lib/functions/_shade.scss
+      1 ./lib/functions/_strip-units.scss
+      1 ./lib/functions/_tint.scss
+      1 ./lib/functions/_transition-property-name.scss
+      1 ./lib/functions/_unpack.scss
+      1 ./lib/grid
+      1 ./lib/grid/_box-sizing.scss
+      1 ./lib/grid/_direction-context.scss
+      1 ./lib/grid/_display-context.scss
+      1 ./lib/grid/_fill-parent.scss
+      1 ./lib/grid/_media.scss
+      1 ./lib/grid/_omega.scss
+      1 ./lib/grid/_outer-container.scss
+      1 ./lib/grid/_pad.scss
+      1 ./lib/grid/_private.scss
+      1 ./lib/grid/_row.scss
+      1 ./lib/grid/_shift.scss
+      1 ./lib/grid/_span-columns.scss
+      1 ./lib/grid/_to-deprecate.scss
+      1 ./lib/grid/_visual-grid.scss
+      1 ./lib/helpers
+      1 ./lib/helpers/_convert-units.scss
+      1 ./lib/helpers/_directional-values.scss
+      1 ./lib/helpers/_font-source-declaration.scss
+      1 ./lib/helpers/_gradient-positions-parser.scss
+      1 ./lib/helpers/_linear-angle-parser.scss
+      1 ./lib/helpers/_linear-gradient-parser.scss
+      1 ./lib/helpers/_linear-positions-parser.scss
+      1 ./lib/helpers/_linear-side-corner-parser.scss
+      1 ./lib/helpers/_radial-arg-parser.scss
+      1 ./lib/helpers/_radial-gradient-parser.scss
+      1 ./lib/helpers/_radial-positions-parser.scss
+      1 ./lib/helpers/_render-gradients.scss
+      1 ./lib/helpers/_shape-size-stripper.scss
+      1 ./lib/helpers/_str-to-num.scss
+      1 ./lib/mixins
+      1 ./lib/mixins/_clearfix.scss
+      1 ./lib/_neat-helpers.scss
+      1 ./lib/_neat.scss
+      1 ./lib/_normalize.scss
+      1 ./lib/settings
+      1 ./lib/settings/_asset-pipeline.scss
+      1 ./lib/settings/_disable-warnings.scss
+      1 ./lib/settings/_grid.scss
+      1 ./lib/settings/_prefixer.scss
+      1 ./lib/settings/_px-to-em.scss
+      1 ./lib/settings/_visual-grid.scss
+      1 /// @link http://robots.thoughtbot.com/closer-look-color-lightness
+      1   $-local-blue: blue(rgba($hex-color, 1));
+      1   $-local-green: green(rgba($hex-color, 1));
+      1   $-local-red: red(rgba($hex-color, 1));
+      1 /// Mixes a color with black.
+      1 /// Mixes a color with white.
+      1 @mixin border-color($vals...) {
+      1 @mixin button ($style: simple, $base-color: #4294f0, $text-size: inherit, $padding: 7px 18px) {
+      1 @mixin buttonstyle($type, $b-color, $t-size, $pad) {
+      1 @mixin column-rule-color($color) {
+      1 @mixin flat($base-color, $grayscale: false, $textsize: inherit, $padding: 7px 18px) {
+      1 @mixin pill($base-color, $grayscale: false, $textsize: inherit, $padding: 7px 18px) {
+      1 @mixin shiny($base-color, $grayscale: false, $textsize: inherit, $padding: 7px 18px) {
+      1 @mixin simple($base-color, $grayscale: false, $textsize: inherit, $padding: 7px 18px) {
+      1 @mixin text-decoration-color($color: currentColor) {
+      1 @mixin triangle($size, $color, $direction) {
+      1 /// @output `border-color`
+      1     $padding: $base-color;
+      2 /// @param {Color} $color
+      1 /// @param {Color (Hex)} $color
+      1 /// Programatically determines whether a color is light or dark.
+      1 /// Provides a quick method for targeting `border-color` on specific sides of a box. Use a `null` value to “skip” a side.
+      1  * Remove the gray background color from active links in IE 10.
+      1   @return mix(#000, $color, $percent);
+      1   @return mix(#fff, $color, $percent);
+      1   $second-stop:   adjust-color($base-color, $red: -56,  $green: -50,  $blue: -33);
+      1     $second-stop-hover: adjust-color($base-color, $red: -66, $green: -62, $blue: -51);
+      2   // Set $g1 as the default fallback color
+      1 /// Sets the visual grid color. Set with `!global` flag.
+      1   $stop-gradient: adjust-color($base-color, $hue:  8, $saturation:  14%, $lightness: -10%);
+      1   $stop-gradient: adjust-color($base-color, $saturation:  9%,  $lightness: -11%);
+      1     $stop-gradient-hover: adjust-color($base-color, $hue:  8, $saturation: -4%,    $lightness: -15.5%);
+      1     $stop-gradient-hover: adjust-color($base-color, $saturation:  8%, $lightness: -14%);
+      1   success: $color-green-lightest,
+      1 ./temp.txt
+      1 // <text-decoration-line> || <text-decoration-style> || <text-decoration-color>
+      1 $text-inputs-list: 'input[type="color"]',
+      1     $text-shadow-active:   adjust-color($base-color, $hue: 5,  $saturation: -12%,  $lightness: -21.5%);
+      1   $text-shadow:   adjust-color($base-color, $hue:  5, $saturation: -19%, $lightness: -15%);
+      1   $text-shadow:   adjust-color($base-color, $red: -140, $green: -141, $blue: -114);
+      3     $text-shadow: adjust-color($base-color, $saturation: 10%, $lightness: 4%);
+      1   $text-shadow:   adjust-color($base-color, $saturation:  15%, $lightness: -18%);
+      1     $text-shadow-hover:   adjust-color($base-color, $hue:  5, $saturation: -5%,    $lightness: -22%);
+      2     $text-size: $base-color;
+      1   $third-stop:    adjust-color($base-color, $red: -86,  $green: -75,  $blue: -48);
+      1     $third-stop-hover:  adjust-color($base-color, $red: -93, $green: -85, $blue: -66);
+      1 ./uswds.scss
+      2       $values: append($values, $color $column-offset, comma);
+      1   $values: ($transparent 0, $color 0);
+      1 $visual-grid-color: #eee !default;
+      1   warning: $color-gold-lightest,
